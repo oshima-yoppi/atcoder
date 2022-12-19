@@ -1,5 +1,5 @@
 import os
-import pathlib
+# import pathlib
 import shutil
 
 n = input("atcoder何番のフォルダを作成する？")
@@ -16,6 +16,7 @@ if os.path.exists(path):
 os.makedirs(n)
 li = ["/a.py", "/b.py", "/c.py", "/d.py", "/e.py", "/f.py"]
 for i in li:
-    f = pathlib.Path(n + i)
-    f.touch()
+    shutil.copy('moto.py', n+i)
+
+
 print(f"ディレクトリ{path}を作成しました。")
